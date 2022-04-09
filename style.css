@@ -1,8 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 56px;
     font-weight: 700;
     color: #75b79e;
+    margin-bottom: 47px;
 }
 
 body {
@@ -16,8 +20,9 @@ body {
     padding-top: 40px;
 }
 
-ul {
+.jogo {
     width: 80%;
+    height: 326px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -25,17 +30,34 @@ ul {
     align-content: space-between;
 }
 
-li {
+.verso .frente {
+    width: 100px;
+    height: 100px;
+}
+
+.frente {
+    display: none;
+}
+
+.verso {
+    display: flex;
+}
+
+.carta {
     background-color: #a7e9af;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: auto;
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    backface-visibility: hidden;
 }
 
-li > img {
-    width: 68%;
-    height: 85%;
+.carta > img {
+    width: 100px;
+    height: 100px;
 }
 
 @media (max-width: 615px) {
