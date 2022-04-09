@@ -7,6 +7,7 @@ h1 {
     font-weight: 700;
     color: #75b79e;
     margin-bottom: 47px;
+    text-align: center;
 }
 
 body {
@@ -20,13 +21,23 @@ body {
     padding-top: 40px;
 }
 
-.jogo {
+.jogo1 {
     width: 80%;
-    height: 326px;
+    height: 163px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.jogo2 {
+    width: 80%;
+    height: 163px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     align-content: space-between;
 }
 
@@ -60,8 +71,22 @@ body {
     height: 100px;
 }
 
-@media (max-width: 615px) {
+@media (max-width: 613px) {
     h1 {
         font-size: 36px;
+    }
+    .jogo1 {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    .jogo2 {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .carta {
+        margin-bottom: 34px;
     }
 }

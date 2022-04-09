@@ -1,4 +1,5 @@
-const board = document.querySelector(".jogo")
+const board1 = document.querySelector(".jogo1")
+const board2 = document.querySelector(".jogo2")
 const cartas = []
 const imagensFrente = [
     `<img src="imgs/bobrossparrot.gif" class="frente"/>`,
@@ -23,8 +24,12 @@ while (numCartas%2!=0 || numCartas < 4 || numCartas > 14) {
         i++
     }
     cartas.sort(comparador)
+    while (j<numCartas/2) {
+        board1.innerHTML += cartas[j]
+        j++    
+    }
     while (j<numCartas) {
-        board.innerHTML += cartas[j]
+        board2.innerHTML += cartas[j]
         j++    
     }
 
