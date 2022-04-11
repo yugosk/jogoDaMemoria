@@ -29,6 +29,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-content: space-between;
+    perspective: 1000px;
 }
 
 .jogo2 {
@@ -39,6 +40,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-content: space-between;
+    perspective: 1000px;
 }
 
 .verso .frente {
@@ -63,14 +65,54 @@ body {
     height: 146px;
     border-radius: 5px;
     flex-shrink: 0;
-    backface-visibility: hidden;
+    border: 1px solid #99cea8;
+    transition: all 0.6s;
+    transform-style: preserve-3d;
+}
+
+.carta:hover {
+    cursor: pointer;
+}
+
+.virada {
+    transform: rotateY(180deg);
+}
+
+.virada .frente {
+    display: flex;
+    transform: rotateY(-180deg);
+}
+
+.virada .verso {
+    display: none;
+}
+
+.certo .frente {
+    display: flex;
+}
+
+.certo .verso {
+    display: none;
+}
+
+.certo:hover {
+    cursor: default;
 }
 
 .carta > img {
     width: 100px;
     height: 100px;
+    transition: all 0s;
 }
 
+.impedir-clique {
+    top: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+  
 @media (max-width: 613px) {
     h1 {
         font-size: 36px;
